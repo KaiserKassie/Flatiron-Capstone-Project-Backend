@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Mats</h1>
+
+<div id="mats">
+  <% @mats.each do |mat| %>
+    <%= render mat %>
+    <p>
+      <%= link_to "Show this mat", mat %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New mat", new_mat_path %>

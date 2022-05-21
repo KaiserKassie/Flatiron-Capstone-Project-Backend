@@ -1,0 +1,2 @@
+class Mat < ApplicationRecord
+end
