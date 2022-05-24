@@ -65,6 +65,6 @@ class MatsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def mat_params
-      params.require(:mat).permit(:brand, :name, :weight, :thickness, :material)
+      params.require(:mat).permit(:brand, :name, :weight, :length1, :length2, :length3, :width1, :width2, :thickness, :material, :image, :link)
     end
 end

@@ -17,7 +17,7 @@ class MatsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create mat" do
     assert_difference("Mat.count") do
-      post mats_url, params: { mat: { brand: @mat.brand, material: @mat.material, name: @mat.name, thickness: @mat.thickness, weight: @mat.weight } }
+      post mats_url, params: { mat: { brand: @mat.brand, image: @mat.image, length1: @mat.length1, length2: @mat.length2, length3: @mat.length3, link: @mat.link, material: @mat.material, name: @mat.name, thickness: @mat.thickness, weight: @mat.weight, width1: @mat.width1, width2: @mat.width2 } }
     end
 
     assert_redirected_to mat_url(Mat.last)
@@ -34,7 +34,7 @@ class MatsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update mat" do
-    patch mat_url(@mat), params: { mat: { brand: @mat.brand, material: @mat.material, name: @mat.name, thickness: @mat.thickness, weight: @mat.weight } }
+    patch mat_url(@mat), params: { mat: { brand: @mat.brand, image: @mat.image, length1: @mat.length1, length2: @mat.length2, length3: @mat.length3, link: @mat.link, material: @mat.material, name: @mat.name, thickness: @mat.thickness, weight: @mat.weight, width1: @mat.width1, width2: @mat.width2 } }
     assert_redirected_to mat_url(@mat)
   end
 

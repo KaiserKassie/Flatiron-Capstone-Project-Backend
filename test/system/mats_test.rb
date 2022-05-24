@@ -15,10 +15,17 @@ class MatsTest < ApplicationSystemTestCase
     click_on "New mat"
 
     fill_in "Brand", with: @mat.brand
+    fill_in "Image", with: @mat.image
+    fill_in "Length1", with: @mat.length1
+    fill_in "Length2", with: @mat.length2
+    fill_in "Length3", with: @mat.length3
+    fill_in "Link", with: @mat.link
     fill_in "Material", with: @mat.material
     fill_in "Name", with: @mat.name
     fill_in "Thickness", with: @mat.thickness
     fill_in "Weight", with: @mat.weight
+    fill_in "Width1", with: @mat.width1
+    fill_in "Width2", with: @mat.width2
     click_on "Create Mat"
 
     assert_text "Mat was successfully created"
@@ -30,10 +37,17 @@ class MatsTest < ApplicationSystemTestCase
     click_on "Edit this mat", match: :first
 
     fill_in "Brand", with: @mat.brand
+    fill_in "Image", with: @mat.image
+    fill_in "Length1", with: @mat.length1
+    fill_in "Length2", with: @mat.length2
+    fill_in "Length3", with: @mat.length3
+    fill_in "Link", with: @mat.link
     fill_in "Material", with: @mat.material
     fill_in "Name", with: @mat.name
     fill_in "Thickness", with: @mat.thickness
     fill_in "Weight", with: @mat.weight
+    fill_in "Width1", with: @mat.width1
+    fill_in "Width2", with: @mat.width2
     click_on "Update Mat"
 
     assert_text "Mat was successfully updated"

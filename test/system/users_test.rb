@@ -16,7 +16,7 @@ class UsersTest < ApplicationSystemTestCase
 
     fill_in "Birth date", with: @user.birth_date
     fill_in "First name", with: @user.first_name
-    fill_in "Password digest", with: @user.password_digest
+    fill_in "Password", with: @user.password
     fill_in "Username", with: @user.username
     click_on "Create User"
 
@@ -30,7 +30,7 @@ class UsersTest < ApplicationSystemTestCase
 
     fill_in "Birth date", with: @user.birth_date
     fill_in "First name", with: @user.first_name
-    fill_in "Password digest", with: @user.password_digest
+    fill_in "Password", with: @user.password
     fill_in "Username", with: @user.username
     click_on "Update User"
 

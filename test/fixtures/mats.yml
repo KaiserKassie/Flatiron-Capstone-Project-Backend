@@ -3,13 +3,27 @@
 one:
   brand: MyString
   name: MyString
-  weight: 1
-  thickness: 1
+  weight: 1.5
+  length1: 1
+  length2: 1
+  length3: 1
+  width1: 1
+  width2: 1
+  thickness: 1.5
   material: MyString
+  image: MyString
+  link: MyString
 
 two:
   brand: MyString
   name: MyString
-  weight: 1
-  thickness: 1
+  weight: 1.5
+  length1: 1
+  length2: 1
+  length3: 1
+  width1: 1
+  width2: 1
+  thickness: 1.5
   material: MyString
+  image: MyString
+  link: MyString
