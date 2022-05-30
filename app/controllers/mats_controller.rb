@@ -15,11 +15,6 @@ class MatsController < ApplicationController
   def show
   end
 
-  # GET /mats/new
-  def new
-    @mat = Mat.new
-  end
-
   # GET /mats/1/edit
   def edit
   end
@@ -49,16 +44,6 @@ class MatsController < ApplicationController
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @mat.errors, status: :unprocessable_entity }
       end
-    end
-  end
-
-  # DELETE /mats/1 or /mats/1.json
-  def destroy
-    @mat.destroy
-
-    respond_to do |format|
-      format.html { redirect_to mats_url, notice: "Mat was successfully destroyed." }
-      format.json { head :no_content }
     end
   end
 
