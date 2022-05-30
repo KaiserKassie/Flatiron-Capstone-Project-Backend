@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_24_062135) do
-  create_table "matassignments", force: :cascade do |t|
+ActiveRecord::Schema[7.0].define(version: 2022_05_26_062217) do
+  create_table "mat_favs", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "mat_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["mat_id"], name: "index_matassignments_on_mat_id"
-    t.index ["user_id"], name: "index_matassignments_on_user_id"
+    t.index ["mat_id"], name: "index_mat_favs_on_mat_id"
+    t.index ["user_id"], name: "index_mat_favs_on_user_id"
   end
 
   create_table "mats", force: :cascade do |t|
@@ -37,22 +37,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_062135) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "pose_assignments", force: :cascade do |t|
+  create_table "pose_favs", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "pose_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["pose_id"], name: "index_pose_assignments_on_pose_id"
-    t.index ["user_id"], name: "index_pose_assignments_on_user_id"
-  end
-
-  create_table "poseassignments", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "pose_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["pose_id"], name: "index_poseassignments_on_pose_id"
-    t.index ["user_id"], name: "index_poseassignments_on_user_id"
+    t.index ["pose_id"], name: "index_pose_favs_on_pose_id"
+    t.index ["user_id"], name: "index_pose_favs_on_user_id"
   end
 
   create_table "poses", force: :cascade do |t|
@@ -67,17 +58,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_062135) do
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "password"
     t.string "first_name"
-    t.integer "birth_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
-  add_foreign_key "matassignments", "mats"
-  add_foreign_key "matassignments", "users"
-  add_foreign_key "pose_assignments", "poses"
-  add_foreign_key "pose_assignments", "users"
-  add_foreign_key "poseassignments", "poses"
-  add_foreign_key "poseassignments", "users"
+  add_foreign_key "mat_favs", "mats"
+  add_foreign_key "mat_favs", "users"
+  add_foreign_key "pose_favs", "poses"
+  add_foreign_key "pose_favs", "users"
 end

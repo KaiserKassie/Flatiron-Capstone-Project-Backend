@@ -1,6 +1,11 @@
 class MatsController < ApplicationController
   before_action :set_mat, only: %i[ show edit update destroy ]
 
+  def fav
+    @mat = Mat.all.find(params[:id])
+    MatFav.create(user_id: current_user.id, mat_id: @mat.id)
+  end
+
   # GET /mats or /mats.json
   def index
     @mats = Mat.all

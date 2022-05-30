@@ -1,6 +1,6 @@
 require "test_helper"
 
-class PoseAssignmentTest < ActiveSupport::TestCase
+class MatFavTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

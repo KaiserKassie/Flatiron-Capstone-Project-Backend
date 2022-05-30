@@ -1,3 +1,5 @@
+puts "begin seeding"
+
 puts "seeding mats"
 
 Mat.create(brand: "Jade Yoga", name: "Level One", weight: 1.5, length1: 68, width1: 24, thickness: 4, material: "Rubber", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTamqRplvsr3sbVVJT6giUuBRQ7c4gl1yNjeA&usqp=CAU", link: "https://jadeyoga.com/products/level-1-mat")
@@ -55,5 +57,39 @@ Mat.create(brand: "Gaiam", name: "Athletic Dynamat", weight: 3.7, length1: 78, w
 Mat.create(brand: "Gaiam", name: "Extra Large", weight: 8, length1: 72, width1: 48, thickness: 7, material: "PVC", image: "https://cdn.shopify.com/s/files/1/1728/2157/products/05-63542_7MM-EXTRA-LARGE-YOGA-MAT-BLACK_G.jpg?v=1571340962", link: "https://www.gaiam.com/products/extra-large-yoga-mat-7mm")
 Mat.create(brand: "Gaiam", name: "Kids", weight: 1.8, length1: 60, width1: 24, thickness: 4, material: "PVC", image: "https://m.media-amazon.com/images/I/81MrWf-8iqL._AC_SX425_.jpg", link: "https://www.gaiam.com/collections/kids")
 Mat.create(brand: "Gaiam", name: "Performance Stable Grip", weight: 3.2, length1: 68, width1: 24, thickness: 5, material: "PVC", image: "https://cdn.shopify.com/s/files/1/1728/2157/products/05-63204_6MM-SS-STABLE-GRIP-YOGAMAT_C_1024x1024.jpg?v=1553553946", link: "https://www.gaiam.com/products/performance-stable-grip-yoga-mat-6mm")
+
+puts "seeding poses"
+
+Pose.create(name: "Boat", description: "Starting in a seated position with knees bent and feet flat on the floor, extend your legs until they are at a 45-degree angle. Lift and straighten your arms until they are parallel to the floor.", image: "https://lh3.googleusercontent.com/I3s9ae_RILs-RTgwa22Y1lZx5aN-leaOhB4DE1H_kLPnxC8MYJRUSnbhKEHLqbklwRkCFwa5cS7tb5k0FVtgMUaW_uFjxo7qGiBbVgxz973zyPKTWn_PrAyIB9DK0_rUsuSDwA2ZrBcupurLvmiM-iMkwZLyql7g4cHH4_9y4t3QCyyN2QNEBi_r7xpPUta8r0zOMrsUR3jZjtyaifToHLT82ALfsvyvAJEGfYVDFxmUYUwnHaNSxuZnFRY6K9bB2lpI8WgysNblatB3fyIekrONFMYpvb1Fbh311PFXU3TmsANYu9DwmQ_VeUdkVX1zA0eQ0FLB3cw5PMlT3KwPZ9pLcR1VNinbWD9uypKXfJJK8haHk-oXVfSHazlDlBZyCK02n0piZ-lZ7wQm33ckEJuZRjqc4h8U3MoZjovISkpS55SegrweNkZAqYPsRT3VRcpTvG1BcPFCI-HKCUiY6bpGoUdh3m8twP2NFRlCOTAawwkxnMZPRJ0LMfwTrqNNcDIlkKVTgXUiRptONqlb0D3yC5VB9JzV54rUrVasc-NPGl9j35bmGFhRaBcB_Y1fDsIXBpqXM0h9MyJznkIY3CfFK5Q1bAYns1tUhupjt05PVRAgLtXicPR4FykIZpDMEG-5Mk-tDtLe22cWwGnjyp-Ay3Qhvb-SUmsBu0T4TDuIgiLDkGR5iQXeQTk4mDu-wxjhSZvsSyjf2SjkmNqKB0b4cow9qHrOOD19GdEF6vMBe8RZ1JDEh6pDWrg=s346-no?authuser=0", target_body_area: "Core", seated: true)
+
+Pose.create(name: "Bow", description: "Lie on your stomach with your hands at your side, palms up. Bend your knees to bring your feet up near your buttocks. Keep your toes pointed and lift each hand to grab your ankles. Lift your heels from your buttocks as you lift your upper body away from the mat.", target_body_area: "Back", seated: true, image: "https://lh3.googleusercontent.com/TB2jytf9OyNqppgKvU46Swhl0YgQYJ58yMLr5CgdE26DIj6D1oV3iYykSnZ3i9v3gl-bR2lPPgvaUmHTNMRA2e6eWMbZpjQsCrmKdJvwVQvb3tT-uFyVKbpnXlZv_BdtYUBRfujceA54t3ElE77808_lDty7W4ySOkY_Ttctoiu0JdIyu0vj-WEUFUoBBRIvnw6cIkJ8RDIVO-ESJ_ccMHnNcPR0s3hiXHdH7H3w_dj5Q_P7qZ-Uh88kAWjCLr9x2ZDpH_IGNRectXB70pcYEy1rd7y2CY1R6oPdCODPd-XNfhNktpKdOgYwWSq_RJwwJSnkIO4_V1G4F4_3-mCMr9LG0Lrm12poZYiRc63IfkCihTvaHAQlpSicnQQsxHJzwRyjMlssdbU-M_O8YhqWOi08Mj2GlG-QGZFOWYLBfMtY9iy3QXbXufUeO2aFbMIgKf4m4JQPWR1lfI01a_r9TpZBL4Y_tWtFmv6PVptA-e341AAG_mhAK-Ht2g5Kl1wG10PZH2iJ_HF-nkSgq4OIVxhPiCb0lYNOLAUChV32V5C3t45r3tWR0wIkKKy5EpMhztRH1cNBuH07KG420px3qSGwp1hrOXT6D2YOw8oqvhNz3PhNo2xXv5_P22AOVJmliZdFuOhVaDOdbm0gp15958tU5PisPOoTnSGB_eOHQevQgB3YNpgh9U2OBda1O8J8sj6ngmS2kYh5lMuNMPCRrmcrV7WnSPCCLn4-I0w-IaGoTtiZ2RdPbJksBCc=s943-no?authuser=0")
+
+Pose.create(name: "Bridge", description: "Lie on your back with your knees bent and your feet on the floor. Bring your feel in close to your buttocks. Lift your hips, pressing down through your feet. Clasp your hands together underneath you", target_body_area: "Core", seated: true, image: "https://lh3.googleusercontent.com/fKWbjXryXZVLaDLJFawczsIuaevLAfORNbniek08giI1Ru8GIk9COOEAIM1CDDKHY-o0KMsRM8bXl7rvv9Q-TaoclXiDO5Z3ClpBBBxEW_elg_tST-kmMGhYiE4TgFQropruBvBh5Oy0TeY9ITd8cQdCgZjZ0cap0pWBpbV_qfVQtgrrnd4emaAQ5ZCQ2Vi1IsgC2DJ2o_RRzC8sogm2veQwVw2nOcfbe9ZWGNoUwZ5l0qsihZ7Fq64-j8xCThXk46ozigw_UPORyvfE8Wxyfq-DM8iZpJYsq0HaUskaApBu7dLJzgcWg8t0mS15QnoErLfotmmIcbljB2_9p8Zw1M5_G7gywqmYwnJ3925-3-XBaPp28-eAxGw1MVSdcUjOPGFLnD-LFgqoE83PmF72SoHfgtZWLY4p_zvQg6HlI0YZo5vmFyEazX3vi4HWOF3jpyJUE7ocL6PIDE6MMB_BxizpcoHND5nRAU-GvrBVFldlytlsrhLR52bjo7hLweEncyBWtVoUC0N8LNQIo4fR-gNatFKvi54PnwwSoU4EWd5XwH3qBSMrNZXtZPtwpyzPiMF00KkvnS2vS_NQgnWD33wai9l3hsPk2KC0oM7Fu69p7iHG3ICTpbbDXRvvsmDkn_DqWyBX-p14QIZ6XhZssV0EuTE6-tTuG9kxxvgoP83MPsuxFtH2geGA2o2FYW4NFuhI320okNdI_w81UvGJI-ZFVovIC9gV-vORrwjZqpfzy6BzW0IXn9HrB18=s943-no?authuser=0")
+
+Pose.create(name: "Camel", description: "Kneel on the ground with knees hip width apart and hips stacked over the knees. Reach your tailbone towards your knees, lift your sternum, and bring your elbows back. Keep your chest lifted as you reach towards your heels. Grab your feet with your hands and let the head and neck extend backwards.", target_body_area: "Core", seated: true, image: "https://lh3.googleusercontent.com/iDbP5mvMDclY1sLBO0k-5jI6iD4p9LpMzvVe_7hcqczLse6relGXKho744PvBQYjIHYbpdI4fc-6drgTMmTErfopPh9BxjCkfPtBAV0DC2gCD5y9lP69zVk-jeHkW9oP0Mfo3wHxWbep36pxFCdnnQglgG72123cY8xAfdDUQaHwJRHOWc4sD-KWrJqy6ciBgC4jtdBc2k8_4XBIUFBjCe5ABQU46RbIucaupkn28uIeVxVVogGaDxG4D6cziZBq_d4lxZBQfNQPo-R9OZI-X1hdVgeXe-Wc6xT-c15nQr7q4DsV8vfW2OSxgN5uf8CQkfaYF6nPO1TYDXbcK6BIoNs9JPlTeW-X194f-J4ulsOrk3FlC23emWpooYgiprywIvRJvO9FraXYidVjh--L4MJAlNx5kiyQVE1tzhDR4M8vXb6M5j0Gaa7Fa95dA8X9hfVVHVSiHgXMJojtNmA4Pzq9rb_jVDyrJZbbQvCsINWuPjPC4E-xmwGnD5GPvEEyRmGywPkOR0lQPyrALFPy8R_2dRxV2I2iP3YYtdHQ9GgI1zOeaPUmuyAF3Opp1jQshb3_cSW7icPM4NMMtDgicijdqse7dy2FnXMLSLAl9AdATKqOwdKxv4AvO8pG4HYwzFle1AHQ2vO8fdT8bkp1A91W4QZQBUuNUpwzpsAFMe1ra0Gz7P3DfdLiA16wMXMlo1-pnEh5HYz4oBiUeyOcOmwMMQz3HwlVhMHeH9R0SzsbO4nxV65A0YomgW8=s357-no?authuser=0")
+
+Pose.create(name: "Cat", description: "Kneel on all fours with your knees directly below your hips and your wrists directly below your shoulders. Round your spince as you draw in your abdominal muscles and press into your hands and feet.", target_body_area: "Core", seated: true, image: "https://lh3.googleusercontent.com/kL_z7TgoXJZXzg6ukl_cO601RD1TVOHoy93Mkd-rJysCNYy_xEHZGKyeUzBGIfWefrYCYm2oKCsJbAfLED4rzysVkZLVqRKOUMUmo5mWsA6AB6mcGiPHHky1XpT9K3R4OvA1uliRZ_OAjsC47ia8q_GeGCKjpi3y0y4Fns_qYB8zlff9ZM7IQMQ_foACO_fAMEq-tuKRPQAq2LQ-h1VZ3VTeRapPeL-Kja3wTlZdiRyLgCDjkzzDUX1T-fVicgv_tNZwZ32ctCaCQJ35XsmonO8QScbPb9fr0I7iVlFxQPuI0hrUT0wE7K4qSgNOfZBv3XCpwvoy8y4b44Lg9zJ9AkVqUs3mnwm7zfCekEVgR7ubCMSQN4Fah3pshf7LadSxTSL-UvKTZ2qG58Ku8okfTRyDyQRkuKhLCu24OOhHVfwcocmjHHyKSGcB7abC0C04HEfX_ZYxxaG-tySgYNYF-pSiaCewHkHm26bK5p7j1dJ8njxCZ5uAgBME7bawz8D9Ah3VpxXa6Mdd_ZbJn6pBtH578ixi7lHw4z-NbKOoMQhTxOU1psnvudT-xjegn36q55f3252sPXgRMaHXDFH92Kg6FWDjrhHqYR9kB9eizPa-VqoKHZ2mftmzb3z0Xi28_I3wUjNezht4rzeJhCbxtv8MzWouhOPwJ-SNYwp9HpUBXRwPWc7ArQ4jHVvE09heYXtFRbUO5FdwPgz9mGYAmLlPw2nrMhjPFGFc5SUix3pktltjwORKjCkbvKw=s346-no?authuser=0")
+
+puts "seeding users"
+
+User.create(username: "kassie", first_name: "Kassie", password_digest: BCrypt::Password.create('password'))
+
+User.create(username: "user1", first_name: "User1", password_digest: BCrypt::Password.create('password'))
+
+User.create(username: "user2", first_name: "User2", password_digest: BCrypt::Password.create('password'))
+
+puts "seeding fav mats"
+
+MatFav.create(user_id: 1, mat_id: 4)
+MatFav.create(user_id: 1, mat_id: 14)
+MatFav.create(user_id: 1, mat_id: 24)
+MatFav.create(user_id: 1, mat_id: 30)
+
+puts "seeding fav poses"
+
+PoseFav.create(user_id: 1, pose_id: 1)
+PoseFav.create(user_id: 1, pose_id: 3)
+PoseFav.create(user_id: 1, pose_id: 5)
+
 
 puts "seeding complete!"
