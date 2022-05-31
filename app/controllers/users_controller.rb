@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: %i[ show edit update destroy ]
+  before_action :set_user, only: %i[ edit update destroy ]
 
   # GET /users or /users.json
   def index
@@ -8,7 +8,8 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
-    user = User.fin_by(id: session[:user_id])
+    #byebug
+    user = User.find_by(id: session[:user_id])
     if user
       render json: user
     else

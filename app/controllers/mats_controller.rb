@@ -2,21 +2,15 @@ class MatsController < ApplicationController
   before_action :set_mat, only: %i[ show edit update destroy ]
 
   def fav
-    @mat = Mat.all.find(params[:id])
-    MatFav.create(user_id: current_user.id, mat_id: @mat.id)
+    @mat = Mat.all.find(params[:mat_id])
+    @user = User.all.find(params[:user_id])
+    MatFav.create(user_id: @user.id, mat_id: @mat.id)
   end
 
   # GET /mats or /mats.json
   def index
     @mats = Mat.all
-  end
-
-  # GET /mats/1 or /mats/1.json
-  def show
-  end
-
-  # GET /mats/1/edit
-  def edit
+    render json: @mats
   end
 
   # POST /mats or /mats.json

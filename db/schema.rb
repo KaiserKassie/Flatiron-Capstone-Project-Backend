@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_26_062217) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_31_190153) do
+  create_table "events", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.string "title"
+    t.string "start"
+    t.string "end"
+    t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
   create_table "mat_favs", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "mat_id", null: false
@@ -43,6 +53,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_26_062217) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["pose_id"], name: "index_pose_favs_on_pose_id"
+    t.index ["user_id", "pose_id"], name: "index_pose_favs_on_user_id_and_pose_id", unique: true
     t.index ["user_id"], name: "index_pose_favs_on_user_id"
   end
 

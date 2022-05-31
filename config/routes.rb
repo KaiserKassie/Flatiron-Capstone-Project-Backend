@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   resources :mats
   resources :poses
   resources :users, only:[:show, :create]
@@ -13,4 +14,7 @@ Rails.application.routes.draw do
   delete '/logout', to:  'sessions#destroy'
   post '/pose/:id/fav', to: 'poses#fav', as: 'pose_fav'
   post '/mat/:id/fav', to: 'mats#fav', as: 'mat_fav'
+  delete '/pose/:id/unfav', to: 'poses#unfav'
+  delete 'mat/:id/unfav', to: 'mats#unfav'
+  
 end

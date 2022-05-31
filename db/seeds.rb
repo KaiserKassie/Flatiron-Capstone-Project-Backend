@@ -88,8 +88,5 @@ MatFav.create(user_id: 1, mat_id: 30)
 puts "seeding fav poses"
 
 PoseFav.create(user_id: 1, pose_id: 1)
-PoseFav.create(user_id: 1, pose_id: 3)
-PoseFav.create(user_id: 1, pose_id: 5)
-
 
 puts "seeding complete!"
